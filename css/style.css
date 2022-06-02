@@ -1,0 +1,142 @@
+.container {
+  display: flex;
+  font-family: sans-serif;
+  background-color: rgb(240, 240, 240);
+}
+.description {
+  padding: 1rem;
+  flex-grow: 1;
+  background-color: white;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  border-radius: 1rem;
+  margin: 1rem 1rem;
+}
+.container .description:first-child  {
+  margin-right: 0rem
+}
+.container .description:last-child  {
+  margin-left: 0rem
+}
+.description:hover {
+  box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.2)
+}
+
+button {
+  padding: .5em;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: solid 1px #048d9b;
+  color: #048d9b;
+  background-color: white;
+    display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  border-radius: .5rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button:hover {
+  color: white;
+  background-color: #048d9b;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
+    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  font-weight: medium;
+}
+button:focus {
+  outline-width: 3px;
+  outline-style: dashed;
+  outline-color: #05b1c3;
+}
+
+hr {
+  margin: 1rem 0
+}
+.flex-alignment-container {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.flex-alignment-container > div {
+  background-color: gray;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin: .5rem; 
+}
+
+
+#hero-grid > div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
+}
+#hero-grid {
+  display: grid;
+  min-height: 500px;
+  height: 50vh;
+  margin: 0px 5%;
+  grid-gap: 1em;
+  /*
+    Step 1: Set up grid auto rows with first row being 1 fraction and second row being 1 fraction; or other row heights you'd like to try
+  */
+    /*
+    Step 2: Set up grid auto columns with first column taking up 3 fractions and the second column 1 fraction
+  */
+/* Step 3: Set up grid template areas
+  with first row & first column being area1; first row & second column set to area2; second row & first column to area1; second row & second column to area3
+  */
+}
+
+.area1 {
+/*Step 4: set grid area to area1 */
+  background-image: url(https://images.pexels.com/photos/289323/pexels-photo-289323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+.area2 {
+/*Step 5: set grid area to area2 */
+  background-image: url(https://images.pexels.com/photos/11431628/pexels-photo-11431628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+}
+.area3 { 
+/*Step 6: set grid area to area3 */
+  background-image: url(https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+}
+
+
+/*Solution*/
+/* #hero-grid {
+  display: grid;
+  min-height: 500px;
+  height: 50vh;
+  margin: 0px 5%;
+  grid-gap: 1em;
+  grid-auto-rows: 1fr 1fr;
+  grid-auto-columns: 3fr 1fr;
+  grid-template-areas:
+    "area1 area2"
+    "area1 area3"
+}
+#hero-grid > div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
+}
+
+.area1 {
+  grid-area: area1;
+  background-image: url(https://images.pexels.com/photos/289323/pexels-photo-289323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+.area2 {
+   grid-area: area2;
+  background-image: url(https://images.pexels.com/photos/11431628/pexels-photo-11431628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+}
+.area3 { 
+   grid-area: area3;
+  background-image: url(https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+} */
